@@ -128,6 +128,14 @@ label span {
   font-size: 34px;
 }
 
+.metric-card strong em {
+  font-style: normal;
+  font-size: 14px;
+  color: #64748b;
+  margin-left: 4px;
+  font-weight: 600;
+}
+
 .metric-card i {
   position: absolute;
   right: 18px;
@@ -271,3 +279,332 @@ input {
     grid-template-columns: 1fr;
   }
 }
+
+/* ---------- 鱼缸水质台账 ---------- */
+
+.stack-card .stack-sub {
+  color: #526070;
+  font-size: 13px;
+}
+
+.notice-banner {
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, #dbe3ef);
+  background: color-mix(in srgb, var(--accent) 10%, #ffffff);
+  color: #166534;
+  font-weight: 600;
+}
+
+.notice-banner.notice-danger {
+  border-color: color-mix(in srgb, #e11d48 45%, #dbe3ef);
+  background: color-mix(in srgb, #e11d48 10%, #ffffff);
+  color: #be123c;
+}
+
+/* 鱼缸列表 */
+
+.tank-list {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.tank-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 4px 6px 4px 4px;
+  background: #fbfdff;
+}
+
+.tank-row.tank-active {
+  border-color: var(--primary);
+  background: color-mix(in srgb, var(--primary) 7%, #ffffff);
+}
+
+.tank-select {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background: transparent;
+  min-height: 36px;
+  padding: 4px 8px;
+  text-align: left;
+}
+
+.tank-name {
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tank-count {
+  color: #64748b;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.rename-btn {
+  min-height: 30px;
+  width: 30px;
+  padding: 0;
+  border-radius: 6px;
+  color: #64748b;
+}
+
+.rename-input {
+  flex: 1;
+  min-height: 36px;
+}
+
+.add-tank-btn {
+  width: 100%;
+  border-style: dashed;
+  color: var(--primary);
+  border-color: color-mix(in srgb, var(--primary) 45%, #dbe3ef);
+  background: color-mix(in srgb, var(--primary) 5%, #ffffff);
+}
+
+.add-tank-form {
+  display: grid;
+  gap: 10px;
+}
+
+.add-tank-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.add-tank-actions button {
+  flex: 1;
+}
+
+/* 主面板 */
+
+.main-panel {
+  display: block;
+}
+
+.metrics-grid-ledger {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.metric-card.metric-danger {
+  border-color: color-mix(in srgb, #e11d48 55%, var(--border));
+  background: color-mix(in srgb, #e11d48 6%, #ffffff);
+}
+
+.metric-card.metric-danger strong,
+.metric-card.metric-danger span {
+  color: #e11d48;
+}
+
+.latest-time {
+  color: #64748b;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.alert-box {
+  border-radius: 8px;
+  padding: 14px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  margin-bottom: 26px;
+  border: 1px solid var(--border);
+}
+
+.alert-ok {
+  border-color: color-mix(in srgb, var(--accent) 40%, #dbe3ef);
+  background: color-mix(in srgb, var(--accent) 8%, #ffffff);
+  color: #166534;
+}
+
+.alert-danger {
+  border-color: color-mix(in srgb, #e11d48 50%, #dbe3ef);
+  background: color-mix(in srgb, #e11d48 8%, #ffffff);
+  color: #be123c;
+}
+
+.alert-chip {
+  font-weight: 700;
+  background: #e11d48;
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 13px;
+}
+
+.alert-hint {
+  flex-basis: 100%;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.empty-block {
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  padding: 28px 18px;
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 26px;
+}
+
+.empty-block p {
+  margin-bottom: 0;
+}
+
+/* 录入表单 */
+
+.entry-heading {
+  margin-bottom: 12px;
+}
+
+.entry-meta {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.datetime-field {
+  min-width: 240px;
+}
+
+.entry-tip {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.threshold-hint {
+  font-style: normal;
+  color: #e11d48;
+  font-size: 12px;
+  margin-left: 6px;
+}
+
+.form-error {
+  color: #e11d48;
+  font-weight: 600;
+  margin: 10px 0 0;
+}
+
+.entry-actions {
+  margin-top: 16px;
+}
+
+.record-count {
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* 检测明细 */
+
+.day-group {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.day-group:last-child {
+  margin-bottom: 0;
+}
+
+.day-header {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 14px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid color-mix(in srgb, var(--primary) 25%, #ffffff);
+}
+
+.record-card {
+  grid-template-columns: 92px 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.record-time {
+  display: grid;
+  gap: 8px;
+  justify-items: start;
+  padding-top: 2px;
+}
+
+.record-time strong {
+  font-size: 16px;
+}
+
+.latest-tag,
+.history-tag {
+  border-radius: 999px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.latest-tag {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.history-tag {
+  background: #eef2f7;
+  color: #64748b;
+}
+
+.record-card.record-danger {
+  border-color: color-mix(in srgb, #e11d48 50%, var(--border));
+  background: color-mix(in srgb, #e11d48 5%, #fbfdff);
+}
+
+.reading-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+}
+
+.reading-grid > span {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  color: #526070;
+  font-size: 14px;
+}
+
+.reading-grid b {
+  color: #172033;
+}
+
+.reading-grid .reading-danger {
+  color: #e11d48;
+  font-weight: 700;
+}
+
+.reading-grid .reading-danger b {
+  color: #e11d48;
+}
+
+.record-alert {
+  margin: 10px 0 0;
+  color: #e11d48;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
